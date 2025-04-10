@@ -1,5 +1,0 @@
-Tune GH to disable merge button in PR header has special keyword, for example leading [WIP]
-
-Tune GH to trigger build in PR comment with specific keyword was added, for example [CI/CD]
-
-Use of labels in GH to notify reviewers what is supposed to happen with PR: WorkInProgress, DoNoMerge, etc
