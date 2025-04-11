@@ -1,7 +1,3 @@
-# Resonate Default Pull Request Template
-
----
-
 ## Summary
 <!-- Provide a concise summary of your changes. -->
 
