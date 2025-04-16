@@ -7,7 +7,7 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 # All GitHub metadata and workflows
-.github/           team/shield
+.github/           shield
 .github/**         team/shield
 
 # Docker definitions
@@ -34,29 +34,29 @@ Dockerfile         team/shield
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Java source under the typical Spring Boot layout
-src/main/java/**   team/avengers
+src/main/java/**   avengers
 
 # Common build files for Spring Boot apps
-pom.xml            team/avengers
-build.gradle       team/avengers
-build.gradle.kts   team/avengers
-gradle.properties  team/avengers
+pom.xml            avengers
+build.gradle       avengers
+build.gradle.kts   avengers
+gradle.properties  avengers
 
 # Globs catching “spring” in filenames (adjust if needed)
-**/*Spring*.java   team/avengers
-**/*spring*.yml    team/avengers
+**/*Spring*.java   avengers
+**/*spring*.yml    avengers
 
 # ──────────────────────────────────────────────────────────────────────────────
 # X‑MEN — Spark / Scala codebases
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Scala code
-**/*.scala         team/xmen
+**/*.scala         xmen
 
 # Typical Spark job packages or source dirs
-spark/**           team/xmen
-**/spark/**        team/xmen
+spark/**           xmen
+**/spark/**        xmen
 
 # SBT build files
-build.sbt          team/xmen
-project/**         team/xmen
+build.sbt          xmen
+project/**         xmen
