@@ -12,7 +12,7 @@
 
 # Docker definitions
 Dockerfile         team/shield
-**/[Dd]ockerfile   team/shield
+**/[Dd]ockerfile*  team/shield
 **/*.dockerfile    team/shield
 
 # Terraform & HCL
@@ -21,6 +21,13 @@ Dockerfile         team/shield
 
 # Amazon States Language (Step Functions) definitions
 **/*.asl           team/shield
+
+# Bash scripts
+**/*.sh           team/shield
+**/*.bash         team/shield
+
+# Task Defs
+**/taskdef*.json  team/shield
 
 # ──────────────────────────────────────────────────────────────────────────────
 # AVENGERS — Spring Boot services
@@ -33,6 +40,7 @@ src/main/java/**   team/avengers
 pom.xml            team/avengers
 build.gradle       team/avengers
 build.gradle.kts   team/avengers
+gradle.properties  team/avengers
 
 # Globs catching “spring” in filenames (adjust if needed)
 **/*Spring*.java   team/avengers
