@@ -51,12 +51,12 @@ gradle.properties  @resonate/avengers
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Scala code
-**/*.scala         @resonate/xmen
+**/*.scala         @resonate/x-men
 
 # Typical Spark job packages or source dirs
-spark/**           @resonate/xmen
-**/spark/**        @resonate/xmen
+spark/**           @resonate/x-men
+**/spark/**        @resonate/x-men
 
 # SBT build files
-build.sbt          @resonate/xmen
-project/**         @resonate/xmen
+build.sbt          @resonate/x-men
+project/**         @resonate/x-men
