@@ -1,0 +1,62 @@
+# This is a generic codeowners file for all of our repositories just to have something "in place".
+# Teams ideally should govern their own codeowners files in their respective directories.
+# The idea of this file is to catch all places where changes could occur that people are unsure who should review.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SHIELD TEAM — infra, GitHub config, Docker, Terraform/HCL, ASL
+# ──────────────────────────────────────────────────────────────────────────────
+
+# All GitHub metadata and workflows
+.github/           @resonate/Shield
+.github/**         @resonate/shield
+
+# Docker definitions
+Dockerfile         @resonate/shield
+**/\[Dd\]ockerfile*  @resonate/shield
+**/*.dockerfile    @resonate/shield
+
+# Terraform & HCL
+**/*.tf            @resonate/shield
+**/*.hcl           @resonate/shield
+
+# Bash scripts
+**/*.sh           @resonate/shield
+**/*.bash         @resonate/shield
+
+# Task Defs
+**/taskdef*.json  @resonate/shield
+
+# ──────────────────────────────────────────────────────────────────────────────
+# AVENGERS — Spring Boot services
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Javascript / TS Code
+**/*.js           @resonate/avengers
+**/*.ts           @resonate/avengers
+**/*.jsx          @resonate/avengers
+**/*.tsx          @resonate/avengers
+
+# Common build files for Spring Boot apps
+pom.xml            @resonate/avengers
+build.gradle       @resonate/avengers
+build.gradle.kts   @resonate/avengers
+gradle.properties  @resonate/avengers
+
+# Globs catching “spring” in filenames (adjust if needed)
+**/*Spring*.java   @resonate/avengers
+**/*spring*.yml    @resonate/avengers
+
+# ──────────────────────────────────────────────────────────────────────────────
+# X‑MEN — Spark / Scala codebases
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Scala code
+**/*.scala         @resonate/x-men
+
+# Typical Spark job packages or source dirs
+spark/**           @resonate/x-men
+**/spark/**        @resonate/x-men
+
+# SBT build files
+build.sbt          @resonate/x-men
+project/**         @resonate/x-men
