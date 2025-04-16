@@ -7,56 +7,56 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 # All GitHub metadata and workflows
-.github/           shield
-.github/**         team/shield
+.github/           @resonate/shield
+.github/**         @resonate/shield
 
 # Docker definitions
-Dockerfile         team/shield
-**/[Dd]ockerfile*  team/shield
-**/*.dockerfile    team/shield
+Dockerfile         @resonate/shield
+**/[Dd]ockerfile*  @resonate/shield
+**/*.dockerfile    @resonate/shield
 
 # Terraform & HCL
-**/*.tf            team/shield
-**/*.hcl           team/shield
+**/*.tf            @resonate/shield
+**/*.hcl           @resonate/shield
 
 # Amazon States Language (Step Functions) definitions
-**/*.asl           team/shield
+**/*.asl           @resonate/shield
 
 # Bash scripts
-**/*.sh           team/shield
-**/*.bash         team/shield
+**/*.sh           @resonate/shield
+**/*.bash         @resonate/shield
 
 # Task Defs
-**/taskdef*.json  team/shield
+**/taskdef*.json  @resonate/shield
 
 # ──────────────────────────────────────────────────────────────────────────────
 # AVENGERS — Spring Boot services
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Java source under the typical Spring Boot layout
-src/main/java/**   avengers
+src/main/java/**   @resonate/avengers
 
 # Common build files for Spring Boot apps
-pom.xml            avengers
-build.gradle       avengers
-build.gradle.kts   avengers
-gradle.properties  avengers
+pom.xml            @resonate/avengers
+build.gradle       @resonate/avengers
+build.gradle.kts   @resonate/avengers
+gradle.properties  @resonate/avengers
 
 # Globs catching “spring” in filenames (adjust if needed)
-**/*Spring*.java   avengers
-**/*spring*.yml    avengers
+**/*Spring*.java   @resonate/avengers
+**/*spring*.yml    @resonate/avengers
 
 # ──────────────────────────────────────────────────────────────────────────────
 # X‑MEN — Spark / Scala codebases
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Scala code
-**/*.scala         xmen
+**/*.scala         @resonate/xmen
 
 # Typical Spark job packages or source dirs
-spark/**           xmen
-**/spark/**        xmen
+spark/**           @resonate/xmen
+**/spark/**        @resonate/xmen
 
 # SBT build files
-build.sbt          xmen
-project/**         xmen
+build.sbt          @resonate/xmen
+project/**         @resonate/xmen
