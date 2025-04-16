@@ -12,7 +12,7 @@
 
 # Docker definitions
 Dockerfile         @resonate/shield
-**/[Dd]ockerfile*  @resonate/shield
+**/\[Dd\]ockerfile*  @resonate/shield
 **/*.dockerfile    @resonate/shield
 
 # Terraform & HCL
