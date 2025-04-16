@@ -7,7 +7,7 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 # All GitHub metadata and workflows
-.github/           @resonate/shield
+.github/           @resonate/Shield
 .github/**         @resonate/shield
 
 # Docker definitions
