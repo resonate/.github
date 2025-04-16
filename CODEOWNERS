@@ -1,0 +1,54 @@
+# This is a generic codeowners file for all of our repositories just to have something "in place".
+# Teams ideally should govern their own codeowners files in their respective directories.
+# The idea of this file is to catch all places where changes could occur that people are unsure who should review.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SHIELD TEAM — infra, GitHub config, Docker, Terraform/HCL, ASL
+# ──────────────────────────────────────────────────────────────────────────────
+
+# All GitHub metadata and workflows
+.github/           team/shield
+.github/**         team/shield
+
+# Docker definitions
+Dockerfile         team/shield
+**/[Dd]ockerfile   team/shield
+**/*.dockerfile    team/shield
+
+# Terraform & HCL
+**/*.tf            team/shield
+**/*.hcl           team/shield
+
+# Amazon States Language (Step Functions) definitions
+**/*.asl           team/shield
+
+# ──────────────────────────────────────────────────────────────────────────────
+# AVENGERS — Spring Boot services
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Java source under the typical Spring Boot layout
+src/main/java/**   team/avengers
+
+# Common build files for Spring Boot apps
+pom.xml            team/avengers
+build.gradle       team/avengers
+build.gradle.kts   team/avengers
+
+# Globs catching “spring” in filenames (adjust if needed)
+**/*Spring*.java   team/avengers
+**/*spring*.yml    team/avengers
+
+# ──────────────────────────────────────────────────────────────────────────────
+# X‑MEN — Spark / Scala codebases
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Scala code
+**/*.scala         team/xmen
+
+# Typical Spark job packages or source dirs
+spark/**           team/xmen
+**/spark/**        team/xmen
+
+# SBT build files
+build.sbt          team/xmen
+project/**         team/xmen
