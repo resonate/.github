@@ -19,9 +19,6 @@ Dockerfile         @resonate/shield
 **/*.tf            @resonate/shield
 **/*.hcl           @resonate/shield
 
-# Amazon States Language (Step Functions) definitions
-**/*.asl           @resonate/shield
-
 # Bash scripts
 **/*.sh           @resonate/shield
 **/*.bash         @resonate/shield
@@ -33,8 +30,11 @@ Dockerfile         @resonate/shield
 # AVENGERS — Spring Boot services
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Java source under the typical Spring Boot layout
-src/main/java/**   @resonate/avengers
+# Javascript / TS Code
+**/*.js           @resonate/avengers
+**/*.ts           @resonate/avengers
+**/*.jsx          @resonate/avengers
+**/*.tsx          @resonate/avengers
 
 # Common build files for Spring Boot apps
 pom.xml            @resonate/avengers
