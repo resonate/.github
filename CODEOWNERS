@@ -7,56 +7,56 @@
 # ──────────────────────────────────────────────────────────────────────────────
 
 # All GitHub metadata and workflows
-.github/           @resonate/Shield
-.github/**         @resonate/shield
+.github/           @resonate/devops-shield
+.github/**         @resonate/devops-shield
 
 # Docker definitions
-Dockerfile         @resonate/shield
-**/\[Dd\]ockerfile*  @resonate/shield
-**/*.dockerfile    @resonate/shield
+Dockerfile         @resonate/devops-shield
+**/\[Dd\]ockerfile*  @resonate/devops-shield
+**/*.dockerfile    @resonate/devops-shield
 
 # Terraform & HCL
-**/*.tf            @resonate/shield
-**/*.hcl           @resonate/shield
+**/*.tf            @resonate/devops-shield
+**/*.hcl           @resonate/devops-shield
 
 # Bash scripts
-**/*.sh           @resonate/shield
-**/*.bash         @resonate/shield
+**/*.sh           @resonate/devops-shield
+**/*.bash         @resonate/devops-shield
 
 # Task Defs
-**/taskdef*.json  @resonate/shield
+**/taskdef*.json  @resonate/devops-shield
 
 # ──────────────────────────────────────────────────────────────────────────────
 # AVENGERS — Spring Boot services
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Javascript / TS Code
-**/*.js           @resonate/avengers
-**/*.ts           @resonate/avengers
-**/*.jsx          @resonate/avengers
-**/*.tsx          @resonate/avengers
+**/*.js           @resonate/full-stack-avengers
+**/*.ts           @resonate/full-stack-avengers
+**/*.jsx          @resonate/full-stack-avengers
+**/*.tsx          @resonate/full-stack-avengers
 
 # Common build files for Spring Boot apps
-pom.xml            @resonate/avengers
-build.gradle       @resonate/avengers
-build.gradle.kts   @resonate/avengers
-gradle.properties  @resonate/avengers
+pom.xml            @resonate/full-stack-avengers
+build.gradle       @resonate/full-stack-avengers
+build.gradle.kts   @resonate/full-stack-avengers
+gradle.properties  @resonate/full-stack-avengers
 
 # Globs catching “spring” in filenames (adjust if needed)
-**/*Spring*.java   @resonate/avengers
-**/*spring*.yml    @resonate/avengers
+**/*Spring*.java   @resonate/full-stack-avengers
+**/*spring*.yml    @resonate/full-stack-avengers
 
 # ──────────────────────────────────────────────────────────────────────────────
 # X‑MEN — Spark / Scala codebases
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Scala code
-**/*.scala         @resonate/x-men
+**/*.scala         @resonate/data-engineering-x-men
 
 # Typical Spark job packages or source dirs
-spark/**           @resonate/x-men
-**/spark/**        @resonate/x-men
+spark/**           @resonate/data-engineering-x-men
+**/spark/**        @resonate/data-engineering-x-men
 
 # SBT build files
-build.sbt          @resonate/x-men
-project/**         @resonate/x-men
+build.sbt          @resonate/data-engineering-x-men
+project/**         @resonate/data-engineering-x-men
