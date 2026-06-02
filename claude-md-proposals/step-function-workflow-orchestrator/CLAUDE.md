@@ -72,7 +72,7 @@ Each pipeline's config in `pipelines/<pipeline-name>/config/<env>/` is deployed 
 
 ```bash
 # Install test dependencies
-pip install boto3 pytest
+pip install boto3 pytest pytest-timeout
 
 # Generate golden dataset
 python3 pipelines/<pipeline-name>/tests/integration/create_golden_dataset_synthetic.py
