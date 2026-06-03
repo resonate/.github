@@ -1,6 +1,6 @@
 # CLAUDE.md Updates
 
-This directory contains proposed CLAUDE.md files for 5 repositories that had active PRs merged into main (May–June 2026) by team members: SayaliPat, shrivastavakapil2000, JoeVsVolcano, PallaviJagarlamudi, mike-brant, nathan-resonate.
+This directory contains proposed CLAUDE.md files for 5 repositories that had active PRs merged into main (May–June 2026) by team members: SayaliPat, shrivastavakapil2000, JoeVsVolcano, mike-brant, nathan-resonate.
 
 ## Files to Apply
 
@@ -19,14 +19,20 @@ Each subdirectory contains a `CLAUDE.md` to be committed to the root of the corr
 For each repository, create a branch and open a PR:
 
 ```bash
-# Example for step-function-workflow-orchestrator
+# 1. Check out the target repo
 cd /path/to/step-function-workflow-orchestrator
 git checkout -b chore/add-claude-md
-cp /path/to/this/step-function-workflow-orchestrator/CLAUDE.md ./CLAUDE.md
+
+# 2. Copy the file from this repo (resonate/.github)
+#    Assumes resonate/.github is cloned alongside the target repo
+cp ../resonate-.github/claude-md-updates/step-function-workflow-orchestrator/CLAUDE.md ./CLAUDE.md
+# Or download directly from GitHub:
+# curl -o CLAUDE.md https://raw.githubusercontent.com/resonate/.github/main/claude-md-updates/step-function-workflow-orchestrator/CLAUDE.md
+
 git add CLAUDE.md
 git commit -m "chore: add CLAUDE.md with project guidance for Claude Code"
 git push -u origin chore/add-claude-md
-# Then open PR via GitHub UI or gh pr create
+# Then open PR via GitHub UI or: gh pr create --title "chore: add CLAUDE.md"
 ```
 
 ## What's Covered in Each File
