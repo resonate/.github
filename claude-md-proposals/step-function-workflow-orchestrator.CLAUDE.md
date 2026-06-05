@@ -1,5 +1,5 @@
 # CLAUDE.md update — resonate/step-function-workflow-orchestrator
-# Append the following two sections to the END of the existing CLAUDE.md
+# Append the following three sections to the END of the existing CLAUDE.md
 
 ---
 
@@ -45,7 +45,7 @@ These pipelines have been migrated from `emr-5.34.0` + Spark 2 to `emr-7.12.0` +
 `l2-processing` pipeline now ingests TapAd Digital Graph + LiveRamp Tradedesk Agg to supplement LiveIntent-based HEM→RCID derivation (~+21% coverage lift on district-attributed RCIDs). The `dynamic-dates` Lambda resolves TapAd's flat-file dates (no date-named subdirectory) via a new flat-file sentinel mode.
 
 ### Zip→District Mappings (CDP-118946)
-Four new CSVs under `pipelines/geo-location/config/zip-district-mappings/` (one per district type: congress, proposed-congress, state-senate, state-house). Schema: `zip, state, <district-type>`. Deployed to S3 via terragrunt `configurations` entries. Passed as `myZipDistrictMappingsBasePath` to both `GeoLocationDaily` and `GeoLocationFullBackfill`.
+Four new CSVs under `pipelines/geo-location/config/zip-district-mappings/` (one per district type: congress, proposed-congress, state-senate, state-house). Schema: `zip, state, <district-type>`. Deployed to S3 via terragrunt `configurations` entries. Passed as `zipDistrictMappingsBasePath` to both `GeoLocationDaily` and `GeoLocationFullBackfill`.
 
 ### Backfill `Should Run Full` Bug Fix (CDP-118512)
 A bug in `geo_location.asl.json` where a pre-existing geo full for today overrode the backfill output was fixed by adding an `IsPresent` check on `$.FullInputPath` before the path-equality choice. If backfill output is not propagating, check the `Should Run Full` state machine choice state.
