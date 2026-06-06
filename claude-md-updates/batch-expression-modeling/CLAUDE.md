@@ -302,7 +302,7 @@ Remove the `.$` suffix and wrap expressions in `{% %}` delimiters.
 "ResultPath": null
 
 // JSONata
-// Simply omit the Output field - input passes through by default
+"Output": "{% $states.input %}"
 ```
 
 **Replace entire input with result (default):**
@@ -468,10 +468,10 @@ Many online examples and AI suggestions incorrectly reference `$states.item`, bu
 
 ### Common Patterns
 
-**Pass through input unchanged:**
-- Omit the Output field entirely, OR explicitly use `"Output": "{% $states.input %}"`
+**Pass through input unchanged (Task states):**
+- Always set `"Output": "{% $states.input %}"` explicitly — omitting `Output` on a Task state causes the Task's result to replace the entire input, losing all previous data.
 
-**IMPORTANT:** Any Task state that needs to pass data to subsequent states should preserve the input explicitly. Without an Output field, the Task's result replaces the entire input, losing all previous data.
+**IMPORTANT:** Any Task state that needs to pass data to subsequent states must preserve the input explicitly with `"Output": "{% $states.input %}"`. Without it, the Task's result replaces the entire input.
 
 **Common scenarios requiring input preservation:**
 

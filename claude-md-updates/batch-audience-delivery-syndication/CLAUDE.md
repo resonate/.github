@@ -90,7 +90,7 @@ The BlockGraph pipeline delivers RID-keyed (person-keyed) audience data to Block
 |---|---|---|
 | `blockgraph-create-taxonomy-file` | CDP-118915 (T06) | Generates metadata CSV(s): 13-field (initial/net-new) or 8-field (refresh/known) per BlockGraph spec. Reads audience set from ADS (syndicated) or event `audience_key_list` (custom). Routes by delivery state (known PSIDs). |
 | `blockgraph-rename-files` | CDP-118916 (T07) | Concatenates per-audience Spark output parts into a single `resonate_<akey>_<ts>.csv.gz`. Uses S3 multipart copy for large files, download-concat-upload fallback for small parts. |
-| `blockgraph-publish-files` | CDP-118917 (T08) | Uploads renamed segment files and metadata CSVs to BlockGraph's S3 (`auto/segment/upload/`, `auto/segment/metadata/`). Uses BG-issued SSM creds (`/resonate/cdp-118203/blockgraph/aws-*`) for the BG bucket; writes delivery-state delta (net-new PSIDs) to our own bucket. |
+| `blockgraph-publish-files` | CDP-118917 (T08) | Uploads renamed segment files and metadata CSVs to BlockGraph's S3 (`auto/segment/upload/`, `auto/segment/metadata/`). Uses BG-issued cross-account credentials stored in SSM under a BlockGraph-specific prefix (see `terraform/workflows/lambdas/blockgraph-publish-files/` for authoritative parameter names); writes delivery-state delta (net-new PSIDs) to our own bucket. |
 
 **BlockGraph delivery key facts:**
 - Person-keyed (RID), not cookie-keyed (RCID) — audiences evaluated against a personJar bitmap
@@ -98,7 +98,7 @@ The BlockGraph pipeline delivers RID-keyed (person-keyed) audience data to Block
 - Taxonomy metadata paths: `<prefix>/batch-delivery-payload/metadata/resonate_metadata_{initial,refresh}_<ts>.csv`
 - State file path: `<prefix>/state/known-segments/run_date=YYYYMMDD/run_<ts>.csv`
 - Two delivery modes: `blockgraph_syndicated` (ADS-sourced) and `blockgraph_custom` (event `audience_key_list`)
-- SSM keys: `aws-access-key-id` / `aws-secret-access-key` under `/resonate/cdp-118203/blockgraph/`
+- SSM keys: BG-issued credentials stored under a BlockGraph-specific SSM prefix (see `terraform/workflows/lambdas/blockgraph-publish-files/` for authoritative names)
 
 ---
 

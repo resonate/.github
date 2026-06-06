@@ -29,7 +29,7 @@ scripts/            # Operational helper scripts (Python, not deployed)
 
 **Infrastructure accounts:**
 - Non-prod: default AWS account (no `--profile` flag needed)
-- Prod: `arn:aws:iam::694585954309:role/ProdTerraform` (assumed via `role_arn` in `step_function.hcl`)
+- Prod: `arn:aws:iam::<PROD_ACCOUNT_ID>:role/ProdTerraform` (assumed via `role_arn` in `step_function.hcl` — see the actual value in `terraform/step_function.hcl`)
 
 **State bucket:** `resonate-terraforming-state` (non-prod) / `resonate-terraforming-state-prod` (prod)
 **State key prefix:** `environments/mgmt/lambdas/x_men/` (lambdas) or `environments/mgmt/lambdas/x_men|agents_of_shield/` (step functions)
