@@ -213,7 +213,7 @@ The `prism_dbt` package reached v1.0. Key additions:
 - **`NAME_ADDRESS_LOOKUP` stored procedure** for single-row PII-based lookups
 - **CI workflows** added for automated dbt package deployment, stored procedure deployment, and UDF deployment
 - **Schema-level data tests** for all three service models
-- **`prism_default_waterfall`**: `IP` and `ZIP11` routing clarified — `MAID` and `IP` are single-type (not split by platform/version); ZIP11 is excluded from default (household-precision)
+- **`prism_default_waterfall`**: `IP` and `ZIP11` routing clarified — `MAID` and `IP` are single-type (not split by platform/version); ZIP11 IS included in the default waterfall (it resolves via `persons.zip11` column, not `identifier_index`)
 - **`PRISM` database**: Snowflake DB choices in workflows no longer include a separate `PRISM` DB option — everything lives in `RESONATE.PRISM.*`
 
 ### ZIP11 Routing Fix

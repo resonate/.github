@@ -32,7 +32,9 @@ scripts/            # Operational helper scripts (Python, not deployed)
 - Prod: `arn:aws:iam::694585954309:role/ProdTerraform` (assumed via `role_arn` in `step_function.hcl`)
 
 **State bucket:** `resonate-terraforming-state` (non-prod) / `resonate-terraforming-state-prod` (prod)
-**State key prefix:** `environments/mgmt/lambdas/x_men/` (lambdas) or `environments/mgmt/lambdas/x_men|agents_of_shield/` (step functions)
+**State key prefixes:**
+- Lambdas: `environments/mgmt/lambdas/x_men/`
+- Step Functions: `environments/mgmt/lambdas/x_men|agents_of_shield/` (the `|` is a literal character in the S3 key, not an "or")
 
 ---
 

@@ -125,4 +125,4 @@ batch-expression-modeling
                     └─> blockgraph-publish-files  (upload to FreeWheel)
 ```
 
-The step function orchestrating these three Lambdas lives in `step-function-workflow-orchestrator` (or this repo — check `workflows/step-functions/`).
+To locate the step function that orchestrates these three Lambdas, search for references to `blockgraph-rename-files`, `blockgraph-create-taxonomy-file`, or `blockgraph-publish-files` in the ASL JSON files under `step-function-workflow-orchestrator/pipelines/` or under `workflows/step-functions/` in this repo.
